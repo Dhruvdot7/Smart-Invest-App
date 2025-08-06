@@ -2,14 +2,6 @@
 import requests
 from backend.tips import get_daily_tip
 
-
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 def send_telegram_alert():
     quote, stock_tips = get_daily_tip()
 
